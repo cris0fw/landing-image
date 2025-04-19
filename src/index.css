@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-blue: #4285f4;
+  --font-roboto: "Roboto", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply tracking-wider bg-white text-black;
+}
+
+html {
+  @apply overflow-x-hidden scroll-smooth;
+}
+
+.button-global {
+  @apply py-[14px] 
+  px-7 
+  bg-blue 
+  rounded-full 
+  text-white 
+  text-[12px] 
+  font-nunito 
+  cursor-pointer 
+  transition 
+  duration-200 
+  hover:bg-blue-600 
+  focus:outline-none 
+  focus:ring-2 
+  focus:ring-blue-400 
+  focus:ring-offset-2;
+}
+
+.active {
+  @apply text-blue;
+}
+
+/* NAVBAR */
+/* ----------------------------------------------------------------------------------- */
+/* [HEADER] - Fixed - Fijo */
+.header {
+  @apply fixed top-0 left-0 z-50 w-full bg-white;
+}
+
+/* [NAV] - Centrado - Altura */
+.nav {
+  @apply container mx-auto flex items-center px-3 justify-between h-16 sm:h-20;
+}
+
+/* [UL] - Los links con li y a  */
+.nav_ul {
+  @apply flex flex-col items-center gap-5 mt-24 lg:mt-0 lg:gap-10 lg:flex-row;
+}
+
+.nav-link {
+  @apply text-[15px] leading-[1.7rem] font-light duration-300 text-black no-underline;
+}
+
+.nav-link:hover {
+  color: var(--color-blue);
+}
+
+.nav-link:hover::after {
+  background-color: var(--color-blue);
+}
